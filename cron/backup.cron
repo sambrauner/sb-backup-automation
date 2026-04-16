@@ -1,0 +1,6 @@
+# Backup Automation Cronjob
+# 0 2 * * * -> Führt das Backup täglich um 02:00 Uhr aus
+# >> /var/log/backup.log -> logging
+# 2>&1 -> Fehler auch loggen
+
+0 2 * * * /opt/backup/backup.sh >> /var/log/backup.log 2>&1
